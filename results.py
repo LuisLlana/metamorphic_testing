@@ -8,8 +8,8 @@ from adder_mod import grover,\
     get_sum_gate, get_sum_mutant2_gate
 import numpy as np
 import matplotlib.pyplot as plt
-np.set_printoptions(threshold=np.inf)
 import json
+import os
 
 
 EXPERIMENTS_DIR = 'experiments'
@@ -139,15 +139,17 @@ def gen_charts(filename, nbits):
 def main():
     failures = ['10101', '10011', '10010', '11010']
     nbits = len(failures[0])
-    # results(failures, nbits, 2*nbits+1, get_gates_R0, R0_RES_FILE)
+    results(failures, nbits, 2*nbits+1, get_gates_R0, R0_RES_FILE)
     gen_charts(R0_RES_FILE, nbits)
 
     failures = ['101', '100', '001']
     nbits = len(failures[0])
     print(R1_RES_FILE)
-    # results(failures, 2*nbits, 5*nbits+1, get_gates_R1, R1_RES_FILE)
+    results(failures, 2*nbits, 5*nbits+1, get_gates_R1, R1_RES_FILE)
     gen_charts(R1_RES_FILE, 2*nbits)
 
 
 if __name__ == '__main__':
+    if not os.path.isdir(EXPERIMENTS_DIR):
+        os.mkdir(EXPERIMENTS_DIR)
     main()
