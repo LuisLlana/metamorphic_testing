@@ -21,7 +21,7 @@ def patata():
     print("patata")
 
 def patata2():
-    print("patata2")
+    print("zanahoria")
     
 def add_sumbits(qc: QuantumCircuit,
                 s1: Union[int, Qubit],
