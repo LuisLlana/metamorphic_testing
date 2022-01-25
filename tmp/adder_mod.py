@@ -20,6 +20,9 @@ AER_SIM = Aer.get_backend('aer_simulator')
 def patata():
     print("patata")
 
+def patata2():
+    print("patata2")
+    
 def add_sumbits(qc: QuantumCircuit,
                 s1: Union[int, Qubit],
                 s2: Union[int, Qubit],
