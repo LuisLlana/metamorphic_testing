@@ -15,14 +15,14 @@ from typing import List
 from typing import Dict
 from io import TextIOBase
 
-AER_SIM = Aer.get_backend('aer_simulator')
+AER_SIM = Aer.get_backend('bak_simulator')
 
 def patata():
     print("patata")
 
 def patata2():
     print("zanahoria")
-    
+
 def add_sumbits(qc: QuantumCircuit,
                 s1: Union[int, Qubit],
                 s2: Union[int, Qubit],
