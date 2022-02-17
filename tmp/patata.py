@@ -15,7 +15,7 @@ from typing import List
 from typing import Dict
 from io import TextIOBase
 
-AER_SIM = Aer.get_backend('bak_simulator')
+AER_SIM = Aer.get_backend('aer_simulator')
 
 def patata():
     print("patata")
